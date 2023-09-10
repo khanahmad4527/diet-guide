@@ -99,10 +99,13 @@ const Recipe = () => {
               gap={6}
               padding={"10px"}
             >
-              {recipeData &&
+              {recipeData && recipeData.length === 0 ? (
+                <Heading>No data found...</Heading>
+              ) : (
                 recipeData.map((recipe, index) => {
                   return <RecipeCard key={index} recipe={recipe} />;
-                })}
+                })
+              )}
             </Grid>
           )}
         </Box>
