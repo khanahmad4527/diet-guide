@@ -23,7 +23,7 @@ const Recipe = () => {
     try {
       setLoading(true);
       const data = await axios.get(
-        `https://api.edamam.com/api/recipes/v2?q=${searchQuery}&page=2&type=public&app_id=${process.env.REACT_APP_EDAMAM_appId}&app_key=${process.env.REACT_APP_EDAMAM_appKey}&cuisineType=Indian`
+        `https://api.edamam.com/api/recipes/v2?q=${searchQuery}&type=public&app_id=${process.env.REACT_APP_EDAMAM_appId}&app_key=${process.env.REACT_APP_EDAMAM_appKey}&cuisineType=Indian`
       );
       setRecipeData(data?.data?.hits);
       setLoading(false);
