@@ -1,70 +1,139 @@
-# Getting Started with Create React App
+# diet-guide
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This web application allows users to log in with Firebase Google authentication and access three main features: Recipe, Calorie, and Diet. It utilizes data from the EDAMAM Try API for recipe information.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Description](#description)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Demo](#demo)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Description
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This web application allows users to log in with Firebase Google authentication and access three main features: Recipe, Calorie, and Diet. It utilizes data from the EDAMAM Try API for recipe information.
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<h4 align="center">Frontend:</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react" />
+  <img src="https://img.shields.io/badge/firebase-%23039BE5.svg?style=for-the-badge&logo=firebase" alt="firebase" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="javascript" />
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html" />
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css" />
+</p>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<h4 align="center">Deployed On:</h4>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="center">
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="vercerl">
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- Firebase Google Login
+- Bottom Navigation with three main screens:
+  1. Recipe
+  2. Calorie
+  3. Diet
+- Recipe Screen with:
+  - Search bar for searching recipes
+  - List of recipes (default: Indian cuisine)
+  - Recipe cards displaying:
+    - Recipe Image
+    - Title
+    - Protein and Fat content (displayed using circular bars)
+    - "Order Now" button (triggers in-app notification)
+- Calorie Screen:
+  - Displays recipes based on user-defined calorie intake
+  - Recipe cards with the same details as the Recipe Screen
+- Diet Screen:
+  - User selects dietary preferences (refer to API Docs for options)
+  - Recipes displayed based on user preferences
+- Logout
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone the repository
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+git clone https://github.com/khanahmad4527/diet-guide.git
+```
+2. Install dependencies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm install
+```
+3. Start the project
 
-## Learn More
+```bash
+npm run start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Log In**: When you launch the app, you will be prompted to log in with your Google account using Firebase authentication.
 
-### Code Splitting
+2. **Navigation**: Utilize the bottom navigation bar to access three main screens:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   - **Recipe**: Discover a wide variety of recipes.
+   - **Calorie**: Find recipes based on your desired calorie intake.
+   - **Diet**: Tailor recipes to your dietary preferences.
 
-### Analyzing the Bundle Size
+## Recipe Screen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+On the Recipe screen, you can:
 
-### Making a Progressive Web App
+- **Search for Recipes**: Use the search bar to find specific recipes.
+- **View Recipes**: Explore a list of recipes displayed in card format.
+- **Order Now**: By clicking "Order Now" on a recipe card, you will receive an in-app notification confirming your order.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Calorie Screen
 
-### Advanced Configuration
+On the Calorie screen, you can:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Set Calorie Intake**: Specify your desired calorie intake to filter recipes accordingly.
+- **View Recipes**: Browse recipes that align with your calorie criteria.
 
-### Deployment
+## Diet Screen
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+On the Diet screen, you can:
 
-### `npm run build` fails to minify
+- **Select Dietary Preferences**: Choose dietary preferences based on the provided options.
+- **View Recipes**: Discover recipes that match your selected dietary preferences.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To log out, click on the "Logout" option.
+
+
+## Screenshots
+
+<div align="center">
+  <h3>Signup Page</h3>
+  <img src="https://res.cloudinary.com/dalqx198y/image/upload/v1694351366/Screenshot_467_f8alai.png" width="500">
+</div>
+
+<div align="center">
+  <h3>Home Page</h3>
+  <img src="https://res.cloudinary.com/dalqx198y/image/upload/v1694352726/Screenshot_472_jun7hc.png" width="500">
+  <img src="https://res.cloudinary.com/dalqx198y/image/upload/v1694352725/Screenshot_474_h2cd5o.png" width="500">
+</div>
+
+<div align="center">
+  <h3>Watchlist page</h3>
+  <img src="https://res.cloudinary.com/dalqx198y/image/upload/v1694351367/Screenshot_466_pwlpam.png" width="500">
+</div>
+
+<div align="center">
+  <h3>Favourite page</h3>
+  <img src="https://res.cloudinary.com/dalqx198y/image/upload/v1694351367/Screenshot_465_d6dw0f.png" width="500">
+</div>
+
+## Demo
+
+Check out the demo <a href="https://diet-guide.vercel.app" target="_blank">here</a>
